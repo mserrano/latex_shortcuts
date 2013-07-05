@@ -1,0 +1,88 @@
+\ProvidesPackage{mserrano_shortcuts}
+\usepackage{fullpage,amssymb,amsmath,amsthm,mathrsfs}
+\renewcommand{\epsilon}{\varepsilon}
+\makeatletter
+\def\th@plain{
+   \itshape
+    \thm@headfont{\bfseries}
+    \let\thm@indent\noindent
+}
+\def\th@definition{
+   \normalfont
+   \thm@headfont{\bfseries}
+   \let\thm@indent\noindent
+}
+\def\th@remark{
+   \normalfont
+   \thm@headfont{\itshape}
+   \let\thm@indent\noindent
+}
+\renewenvironment{proof}[1][\proofname]{\par
+   \pushQED{\qed}
+   \normalfont \topsep6\p@\@plus6\p@\relax
+   \trivlist
+   \item[\hskip\labelsep
+         \em
+     #1\@addpunct{.}]\ignorespaces
+}{
+   \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{openprob}{Open Problem}
+\newtheorem{axiom}{Axiom}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{definition}{Definition}
+\newtheorem*{example}{Example(s)}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem*{recall}{Recall}
+\newtheorem*{question}{Question}
+\newtheorem*{answer}{Answer}
+\newcommand{\mn}[1]{{\left\lVert#1\right\rVert^*}}
+\newcommand{\s}[1]{{\left\{#1\right\}}}
+\newcommand{\floor}[1]{{\left\lfloor#1\right\rfloor}}
+\newcommand{\subgen}[1]{{\left\langle#1\right\rangle}}
+\newcommand{\characteristic}{\textrm{ {\rm char} }}
+\newcommand{\Aut}{\textrm{{\rm Aut}}}
+\newcommand{\id}{\textrm{{\rm id}}}
+\newcommand{\stab}{\textrm{{\rm stab}}}
+\newcommand{\orbit}{\mathscr{O}}
+\newcommand{\lcm}{\textrm{{\rm lcm}}}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\mi}{\mathpzc{i}}
+\newcommand{\ot}{\otimes}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\I}{\mathbb{I}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\DNE}{\textrm{DNE}}
+\newcommand{\sgn}{\textrm{ sgn }}
+\newcommand{\dell}{\partial}
+\newcommand{\del}{\nabla}
+\newcommand{\m}[1]{{\left|#1\right|}}
+\newcommand{\nm}[1]{{\left\|#1\right\|}}
+\newcommand{\maxnorm}[1]{{\left\|#1\right\|_{\infty}}}
+\newcommand{\inner}[1]{{\left\langle#1\right\rangle}}
+\newcommand{\Image}{\textrm{im}}
+\newcommand{\Domain}{\textrm{Domain}}
+\newcommand{\mesh}{\textrm{mesh }}
+\newcommand{\Area}{\textrm{Area}}
+\newcommand{\interior}{\textrm{{\rm int}}}
+\newcommand{\Rie}{\mathscr{R}}
+\newcommand{\cc}{\mathscr{C}}
+\newcommand{\cd}{\mathscr{D}}
+\newcommand{\tr}{\textrm{{\rm tr}}}
+\newcommand{\lang}{\mathcal{L}}
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\renewcommand{\th}[0]{\superscript{th}}
